@@ -13,7 +13,7 @@
     <script src="javascript/logic.js"></script>
 </head>
 <body> 
-<br><br>
+<br>
     <div class='jumbotron col-md-8 col-centered'>
         <div class='container'>
             <p>You will be given a random number at the start of the game</p>
@@ -24,21 +24,26 @@
         </div>
     </div>
     <br>
+    <center><button onClick='resetGame()'><img src='images/start.png'></button></center>
+    <br>
     <div class='row'>
         <div class='col-md-3'>
               
         </div>
         <div class='col-md-3'>
             <div class='score col-100'>
-                Score: <span id='score'>0</span>
+                <br>
+                <center>
+                <h1>Score: <span id='score'>0</span></h1>
+                </center>
             </div>
         </div>
         <div class='col-md-3'>
-            <div class='score col-50'>
-                Wins: <span id='wins'>0</span>
-            </div>
-            <div class='score col-50'>
-                Losses: <span id='losses'>0</span>
+            <div class='score col-100'>
+                <br>
+                <center>
+                <h1>Goal: <span id='goal'>0</span></h1>
+                </center>
             </div>
         </div>
         <div class='col-md-3'>
@@ -49,49 +54,57 @@
     <div class='row col-md-6 col-centered col-150'>
         <div class='col-md-12 col-centered'>
             <center><h3>CLICK THE GEMS TO PLAY</h3></center>
-           
         </div>
+        <div class='col-md-12 col-centered'>
+            <div class='col-md-2 col-50 score col-centered'>
+                <center>
+                <h1>+ <span id='valueAdd'></span></h1>
+                </center>
+            </div>
+            <br>
+        </div>
+
         <div class='col-md-2'>
               
         </div>
         <div class='col-md-1'>
-            <button><img src='images/gem1.gif'></button>
+            <button onClick='gemOneClick();'><img src='images/gem1.gif'></button>
         </div>
         <div class='col-md-1'>
               
         </div>
         <div class='col-md-1'>
-            <button><img src='images/gem2.gif'></button>
+            <button onClick='gemTwoClick();'><img src='images/gem2.gif'></button>
         </div>
         <div class='col-md-1'>
               
         </div>
         <div class='col-md-1'>
-            <button><img src='images/gem3.gif'></button>   
+            <button onClick='gemThreeClick();'><img src='images/gem3.gif'></button>   
         </div>
         <div class='col-md-1'>
               
         </div>
         <div class='col-md-1'>
-            <button><img src='images/gem4.gif'></button>  
+            <button onClick='gemFourClick();'><img src='images/gem4.gif'></button>  
         </div>
         <div class='col-md-2'>
               
         </div>
     </div>
+    <br><br>
         <div class='row'>
-            <div class='col-md-3'>
+            <div class='col-md-4'>
               
             </div>
-                <div class='col-md-3 col-150 score'>
-
+                <div class='col-md-4 col-100 score'>
+                    <center>
+                        <br>
+                    <h3>Wins: <span id='wins'>0</span> Losses: <span id='losses'>0</span></h3>
+                    </center>
                 </div>
+            <div class='col-md-4'>
 
-                <div class='col-md-3 col-150 score'>
-                    
-                </div>
-            <div class='col-md-3'>
-              
             </div>
         </div>
 </body>
