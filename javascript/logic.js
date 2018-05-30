@@ -33,7 +33,7 @@ var resetGame = function() {
     $('#valueAdd').text('');
     $('#score').text('0');
     $('#goal').text(goal);
-
+    $('#start').trigger('play');
 }
 
 //Click events in DOM
@@ -43,6 +43,7 @@ var gemOneClick = function() {
     userTotal = userTotal + gemOne;
     $('#score').text(userTotal);
     winCheck();
+    $('#gem1').trigger('play');
 }
 var gemTwoClick = function() {
     console.log(gemTwo);
@@ -50,6 +51,7 @@ var gemTwoClick = function() {
     userTotal = userTotal + gemTwo;
     $('#score').text(userTotal);
     winCheck();
+    $('#gem2').trigger('play');
 }
 var gemThreeClick = function() {
     console.log(gemThree);
@@ -57,6 +59,7 @@ var gemThreeClick = function() {
     userTotal = userTotal + gemThree;
     $('#score').text(userTotal);
     winCheck();
+    $('#gem3').trigger('play');
 }
 var gemFourClick = function() {
     console.log(gemFour);
@@ -64,20 +67,25 @@ var gemFourClick = function() {
     userTotal = userTotal + gemFour;
     $('#score').text(userTotal);
     winCheck();
+    $('#gem4').trigger('play');
 }
 
 var winCheck = function() {
 
     if (userTotal === goal) {
-        alert('You Win!');
+        $('#score').text('You Win!')
+        $('#goal').text('Play Again!')
+        $('#applause').trigger('play');
         wins = wins + 1;
         $('#wins').text(wins);
-        resetGame();
     }
     if (userTotal > goal) {
-        alert('You lose!')
+        $('#score').text('You Lose!')
+        $('#goal').text('Try Again!')
+        $('#laugh').trigger('play');
         losses = losses + 1;
         $('#losses').text(losses);
-        resetGame();
 }
 }
+
+

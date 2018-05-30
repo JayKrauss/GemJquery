@@ -17,9 +17,21 @@
 
 body {
     background-image: url("../images/background.png");
-    background: black;
+    background-color: black;
 }
 
 .score {
     background: white;
+}
+
+p{
+    font-family: 'Cinzel', serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Cinzel', serif;
+}
+
+.sounds { 
+    display: none;
 }
