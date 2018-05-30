@@ -30,39 +30,39 @@ var resetGame = function() {
     console.log(gemThree);
     gemFour = gemValue();
     console.log(gemFour);
-    document.getElementById('valueAdd').innerHTML = '';
-    document.getElementById('score').innerHTML = '0';
-    document.getElementById('goal').innerHTML = goal;
+    $('#valueAdd').text('');
+    $('#score').text('0');
+    $('#goal').text(goal);
 
 }
 
 //Click events in DOM
 var gemOneClick = function() {
     console.log(gemOne);
-    document.getElementById('valueAdd').innerHTML = gemOne;
+    $('#valueAdd').text(gemOne);
     userTotal = userTotal + gemOne;
-    document.getElementById('score').innerHTML = userTotal;
+    $('#score').text(userTotal);
     winCheck();
 }
 var gemTwoClick = function() {
     console.log(gemTwo);
-    document.getElementById('valueAdd').innerHTML = gemTwo;
+    $('#valueAdd').text(gemTwo);
     userTotal = userTotal + gemTwo;
-    document.getElementById('score').innerHTML = userTotal;
+    $('#score').text(userTotal);
     winCheck();
 }
 var gemThreeClick = function() {
     console.log(gemThree);
-    document.getElementById('valueAdd').innerHTML = gemThree;
+    $('#valueAdd').text(gemThree);
     userTotal = userTotal + gemThree;
-    document.getElementById('score').innerHTML = userTotal;
+    $('#score').text(userTotal);
     winCheck();
 }
 var gemFourClick = function() {
     console.log(gemFour);
-    document.getElementById('valueAdd').innerHTML = gemFour;
+    $('#valueAdd').text(gemFour);
     userTotal = userTotal + gemFour;
-    document.getElementById('score').innerHTML = userTotal;
+    $('#score').text(userTotal);
     winCheck();
 }
 
@@ -71,13 +71,13 @@ var winCheck = function() {
     if (userTotal === goal) {
         alert('You Win!');
         wins = wins + 1;
-        document.getElementById('wins').innerHTML = wins;
+        $('#wins').text(wins);
         resetGame();
     }
     if (userTotal > goal) {
         alert('You lose!')
         losses = losses + 1;
-        document.getElementById('losses').innerHTML = losses;
+        $('#losses').text(losses);
         resetGame();
 }
 }
