@@ -21,15 +21,10 @@ var gemFour = 0;
 var resetGame = function() {
     userTotal = 0;
     goal = Math.floor(Math.random()*(120-19+1) + 19);
-    console.log(goal);
     gemOne = gemValue();
-    console.log(gemOne);
     gemTwo = gemValue();
-    console.log(gemTwo);
     gemThree = gemValue();
-    console.log(gemThree);
     gemFour = gemValue();
-    console.log(gemFour);
     $('#valueAdd').text('');
     $('#score').text('0');
     $('#goal').text(goal);
@@ -38,7 +33,6 @@ var resetGame = function() {
 
 //Click events in DOM
 var gemOneClick = function() {
-    console.log(gemOne);
     $('#valueAdd').text(gemOne);
     userTotal = userTotal + gemOne;
     $('#score').text(userTotal);
@@ -46,7 +40,6 @@ var gemOneClick = function() {
     $('#gem1').trigger('play');
 }
 var gemTwoClick = function() {
-    console.log(gemTwo);
     $('#valueAdd').text(gemTwo);
     userTotal = userTotal + gemTwo;
     $('#score').text(userTotal);
@@ -54,7 +47,6 @@ var gemTwoClick = function() {
     $('#gem2').trigger('play');
 }
 var gemThreeClick = function() {
-    console.log(gemThree);
     $('#valueAdd').text(gemThree);
     userTotal = userTotal + gemThree;
     $('#score').text(userTotal);
@@ -62,7 +54,6 @@ var gemThreeClick = function() {
     $('#gem3').trigger('play');
 }
 var gemFourClick = function() {
-    console.log(gemFour);
     $('#valueAdd').text(gemFour);
     userTotal = userTotal + gemFour;
     $('#score').text(userTotal);
@@ -70,6 +61,7 @@ var gemFourClick = function() {
     $('#gem4').trigger('play');
 }
 
+//Checks for a win/loss condition
 var winCheck = function() {
 
     if (userTotal === goal) {
